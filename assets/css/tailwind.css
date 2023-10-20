@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+.swal2-container {
+  	font-family: 'Aesthet-Nova'
+}
+.swal-confirm-button {
+	background-color: #0242D1;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	width: 60px;
+	height: 35px;
+	border-radius: 9999px;
+}
