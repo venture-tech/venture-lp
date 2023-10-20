@@ -4,8 +4,12 @@ import { sendEmail } from './emailSender'
 import { MessageContent } from './types/messageTypes'
 
 export default async function sendMessage (data: MessageContent) {
+
+  const config = useRuntimeConfig()
+  const emailToSend: string = config.emailToSend as string
+
 	const template = msgVentureEmailTemplate(data)
 	const templateUser = msgUserEmailTemplate(data)
-	await sendEmail('victor@ventureth.com.br', 'victor@ventureth.com.br', 'Venture Tech - Nova Mensagem Recebida', template)
-	return await sendEmail('victor@ventureth.com.br', data.email, 'Venture Tech - Fale Conosco', templateUser)
+	await sendEmail(emailToSend as string, emailToSend as string, 'Venture Tech - Nova Mensagem Recebida', template)
+	return await sendEmail(emailToSend, data.email, 'Venture Tech - Fale Conosco', templateUser)
 }

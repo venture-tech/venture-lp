@@ -29,6 +29,7 @@ export default defineNuxtConfig({
 		mailtrapHost: '',
 		mailtrapPort: '',
 		mailtrapUser: '',
-		mailtrapPass: ''
+		mailtrapPass: '',
+    emailToSend: ''
 	},
 })
